@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="myknot.jpeg" />
+    <link rel="stylesheet" href="myknotnav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>MyKnot Services</title>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <img src="myknot.jpeg">
+
+        <div class="menu-right">
+            <span onclick="myfunction()">&#9776;</span>
+
+            <ul id="menu">
+                <li><a href="">HOME  <i class="fas fa-home" style="color:red"></i></a></li>
+                <li><a href="">SERVICES  <i class="fas fa-handshake-o" style="color:red"></i></a></li>
+                <li><a href="">ABOUT US  <i class="fas fa-users" style="color:red"></i></a></li>
+                <li><a href="">CONTACT US  <i class="fas fa-phone" style="color:red"></i></a></li>
+                <li><a href="">PAYMENTS  <i class="fas fa-credit-card" style="color:red"></i></a></li>
+                <li><a href="">Q-&-A  <i class="fas fa-question-circle" style="color:red"></i></a></li>
+
+            </ul>
+        </div>
+
+    </div>
+    <center>
+        <div class="op">
+            <img src="i1.jpeg" name="slide" width="500px" height="500px" class="img1" />
+        </div>
+    </center>
+
+    <script>
+        function myfunction() {
+            var x = document.getElementById("menu");
+            if (x.style.display == "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+
+            }
+        }
+        image1 = "i1.jpeg";
+        image2 = "i4.jpeg";
+        image3 = "i5.jpeg";
+        image4 = "i6.jpeg";
+        image5 = "i7.jpeg";
+        image6 = "i8.jpeg";
+        image7 = "i9.jpeg";
+        image8 = "i10.jpeg";
+        image9 = "i11.jpeg";
+
+        var i = 1;
+
+        function slideshow() {
+            document.images.slide.src = eval("image" + i);
+            if (i < 9) i++;
+            else i = 1;
+            setTimeout("slideshow()", 3000);
+        }
+        slideshow();
+    </script>
+</body>
+
+</html>
